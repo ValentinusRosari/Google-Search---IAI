@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const port = 5000;
 
+app.use(cors());
+
 app.get("/search/:medicineName", (req, res) => {
   const medicineName = req.params.medicineName;
   const googleSearchUrl = `https://www.google.com/search?q=Beli+obat+${encodeURIComponent(
