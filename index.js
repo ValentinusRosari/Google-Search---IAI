@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const port = 5000;
 
 app.use(cors());
 
@@ -13,6 +12,4 @@ app.get("/search/:medicineName", (req, res) => {
   res.json({ url: googleSearchUrl });
 });
 
-app.listen(port, () => {
-  console.log(`API listening at http://localhost:${port}`);
-});
+module.exports = app;
